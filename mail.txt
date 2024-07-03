@@ -1,0 +1,57 @@
+Subject: Email avec image PNG
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="boundary1"
+
+--boundary1
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<head>
+<style>
+
+div {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background-color: white;
+}
+
+div img {
+    width: 100px;
+}
+
+div p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+div p span {
+    font-weight: 800;
+    color: red;
+}
+
+</style>
+</head>
+<body>
+<div>
+<img src="cid:image1" alt="Image" />
+<p>Noeud<span> numéro 1 </span>inactif !</p>
+</div>
+</body>
+</html>
+
+--boundary1
+Content-Type: image/png
+Content-ID: <image1>
+Content-Disposition: inline; filename="image.png"
+Content-Transfer-Encoding: base64
+
+<base64_encoded_image_data_here>
+
+--boundary1--
